@@ -1,0 +1,102 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 950px auto;      /*cuántas columnas*/
+    grid-template-rows: 60px auto;          /*tamaño de filas*/
+    grid-template-areas: "header header"    /*ubicacion de áreas*/
+                         "contenido menu"
+}
+
+.header{
+    grid-area: header;                       /*nombrar área*/
+   
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-template-areas: "logo busqueda";
+}
+.header .container-logo{
+    grid-area: logo;
+}
+.header .barra-busqueda {
+    grid-area: busqueda;
+    display: flex;
+    align-items: center;
+}
+.header .barra-busqueda input{
+    min-width: 80%;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.header .barra-busqueda button{
+    height: 36px;
+    border: 1px solid #ccc; 
+    border-left: none;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.main {
+    grid-area: contenido;
+}
+
+.main .video{
+    margin: 25px;
+}
+.container .sub{
+    margin: 25px;
+    text-align: center;
+}
+.container .relacionados{
+    text-align: center;
+    padding: 15px;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;      /*cuántas columnas*/
+    grid-template-areas: "video1 video2 video3"    /*ubicacion de áreas*/
+}
+.container .video-relacionado-1{
+    grid-area: video1;
+}
+.container .video-relacionado-2{
+    grid-area: video2;
+}
+.container .video-relacionado-3{
+    grid-area: video3;
+}
+
+.container .menu-lateral{
+    grid-area: menu;
+    padding: 15px;
+    gap: 5px;
+}
+aside section{
+    width: 100%;
+    margin-bottom: 20px;
+}
+aside section .superior{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;      /*cuántas columnas*/
+    grid-template-areas: "avatar nombre"    /*ubicacion de áreas*/
+}
+aside section .superior .avatar{
+    grid-area: avatar;
+    width: 50%;
+    border-radius: 30%;
+}
+aside section .superior .nomb{
+    grid-area: nombre;
+    width: 50%;
+}
+aside section .comentarios{
+    height: 40%;
+}
+aside section .descripcion{
+    height: 30%;
+}
